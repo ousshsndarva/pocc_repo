@@ -1,0 +1,23 @@
+{
+  "root": "libs/stock-inputs",
+  "sourceRoot": "libs/stock-inputs/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/stock-inputs/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/stock-inputs"],
+      "options": {
+        "jestConfig": "libs/stock-inputs/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

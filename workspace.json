@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "projects": {
+    "error-utils": "libs/error-utils",
+    "front-app": "apps/front-app",
+    "front-app-e2e": "apps/front-app-e2e",
+    "gateway-app": "apps/gateway-app",
+    "order-app": "apps/order-app",
+    "order-inputs": "libs/order-inputs",
+    "schema-types": "libs/schema-types",
+    "stock-app": "apps/stock-app",
+    "stock-inputs": "libs/stock-inputs"
+  }
+}

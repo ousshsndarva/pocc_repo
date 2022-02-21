@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateOrderInput {
+  name: String!
+  stocks: [String!]!
+}
+
+input CreateStockInput {
+  name: String!
+}
+
+input ListOrderInput {
+  _id: String
+  name: String
+  stocks: [String!]
+}
+
+input ListStockInput {
+  _id: String
+  name: String
+}
+
+type Mutation {
+  createOrder(payload: CreateOrderInput!): Order!
+  createStock(payload: CreateStockInput!): Stock!
+  updateOrder(payload: UpdateOrderInput!): Order!
+  updateStock(payload: UpdateStockInput!): Stock!
+}
+
+type Order {
+  _id: String!
+  name: String!
+  stocks(populate: Boolean!): [Stock!]!
+}
+
+type Query {
+  order(_id: String!): Order!
+  orders(filters: ListOrderInput): [Order!]!
+  stock(_id: String!): Stock!
+  stocks(filters: ListStockInput): [Stock!]!
+}
+
+type Stock {
+  _id: String!
+  name: String!
+}
+
+input UpdateOrderInput {
+  _id: String!
+  name: String
+  stocks: [String!]
+}
+
+input UpdateStockInput {
+  _id: String!
+  name: String
+}
